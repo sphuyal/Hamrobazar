@@ -25,6 +25,14 @@
             android:padding="20dp"
             android:src="@drawable/hamrobazarlogo"/>
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="415dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/classified"/>
+
+
+
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.AppCompatTextView

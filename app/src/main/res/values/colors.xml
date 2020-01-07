@@ -5,4 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorOrange">#FF9800</color>
     <color name="colordeam">#D1C9C9</color>
+    <color name="coloWhite">#fff</color>
+    <color name="colorskyblue">#2BACCF</color>
 </resources>

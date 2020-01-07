@@ -1,18 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/hlogo"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Hamrobazar App"
+            android:textColor="@color/colorskyblue"
+            android:textSize="30dp"
+            android:layout_marginLeft="10dp"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:text="Thank You for installing Hamrobazar App."
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:text="Before You Can Start Using Online Platform, Please read our terms of service &amp; accept it."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="15dp"/>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/chTerms"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="Click to view Terms of Use"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/coloWhite"
+            android:background="@color/colordeam" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/chSafety"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="Click to view Safety Tips"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/coloWhite"
+            android:background="@color/colordeam" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/chAd"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="Click to view Ad Posting Rule"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/coloWhite"
+            android:background="@color/colordeam" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAgree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I have read &amp; agree to above terms"
+        android:textAllCaps="false"
+        android:background="@color/colorskyblue"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/coloWhite"
+        android:textSize="15dp"/>
+
+
+</LinearLayout>
