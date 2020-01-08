@@ -4,24 +4,24 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 
 import com.sandesh.hamrobazar.R;
 
-public class TermsActivity extends AppCompatActivity {
+public class SafetyActivity extends AppCompatActivity {
 
     private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_terms);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        webView = findViewById(R.id.webView);
-        webView.loadUrl("https://hamrobazaar.com/terms.html");
+        setContentView(R.layout.activity_safety);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        webView = findViewById(R.id.webView);
+        webView.loadUrl("https://hamrobazaar.com/m/safetytips.php");
     }
 
     @Override

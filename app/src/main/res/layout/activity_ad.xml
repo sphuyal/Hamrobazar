@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Condtions.TermsActivity">
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".Condtions.AdActivity">
+
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -16,5 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+
     </androidx.appcompat.widget.LinearLayoutCompat>
+
 </ScrollView>

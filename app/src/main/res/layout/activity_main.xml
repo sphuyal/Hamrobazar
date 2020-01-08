@@ -62,6 +62,7 @@
             android:text="Click to view Terms of Use"
             android:layout_marginTop="40dp"
             android:textColor="@color/coloWhite"
+            android:buttonTint="@color/colorGray"
             android:background="@color/colordeam" />
 
         <androidx.appcompat.widget.AppCompatCheckBox
@@ -71,7 +72,9 @@
             android:text="Click to view Safety Tips"
             android:layout_marginTop="10dp"
             android:textColor="@color/coloWhite"
-            android:background="@color/colordeam" />
+            android:background="@color/colordeam"
+            android:buttonTint="@color/colorGray"
+            android:buttonTintMode="@color/colorskyblue"/>
 
         <androidx.appcompat.widget.AppCompatCheckBox
             android:id="@+id/chAd"
@@ -80,6 +83,7 @@
             android:text="Click to view Ad Posting Rule"
             android:layout_marginTop="10dp"
             android:textColor="@color/coloWhite"
+            android:buttonTint="@color/colorGray"
             android:background="@color/colordeam" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
