@@ -15,13 +15,14 @@
 
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:src="@drawable/uploadlogo"
-            />
+            android:src="@drawable/uploadlogo" />
+
 
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -75,11 +76,26 @@
 
 
         <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etCPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:inputType="textPassword" />
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone:"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/etPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:inputType="number"/>
+            android:inputType="number" />
 
 
         <androidx.appcompat.widget.AppCompatTextView
