@@ -318,5 +318,4 @@ public class RegisterActivity extends AppCompatActivity {
         loginDialog.show(getSupportFragmentManager(), "login dialog");
     }
 
-
 }
