@@ -11,7 +11,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.sandesh.hamrobazar.Adapter.ProductAdapter;
 import com.sandesh.hamrobazar.Api.UsersAPI;
+import com.sandesh.hamrobazar.Model.Products;
 import com.sandesh.hamrobazar.Model.User;
 import com.sandesh.hamrobazar.URL.Url;
 import com.squareup.picasso.Picasso;
@@ -30,11 +32,22 @@ public class DashboardActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     SwipeRefreshLayout refreshLayout;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
         imageProfile = findViewById(R.id.imgProfile);
+        recyclerView = findViewById(R.id.recyclerView);
+        refreshLayout = findViewById(R.id.refreshLayout);
+        showProducts();
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                showProducts();
+
+            }
+        });
         loadCurrentUser();
     }
 
@@ -43,6 +56,38 @@ public class DashboardActivity extends AppCompatActivity {
         moveTaskToBack(true);
     }
 
+    private void showProducts() {
+        refreshLayout.setRefreshing(false);
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(Url.base_url).addConverterFactory(GsonConverterFactory.create()).build();
+        UsersAPI usersAPI = retrofit.create(UsersAPI.class);
+
+        Call<List<Products>> proListCall = usersAPI.getAllProducts();
+
+        proListCall.enqueue(new Callback<List<Products>>() {
+            @Override
+            public void onResponse(Call<List<Products>> call, Response<List<Products>> response) {
+                if (!response.isSuccessful()) {
+                    refreshLayout.setRefreshing(true);
+                    Toast.makeText(DashboardActivity.this, "Error code " + response.code(), Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                List<Products> productsList = response.body();
+                ProductAdapter productAdapter = new ProductAdapter(DashboardActivity.this, productsList);
+                recyclerView.setAdapter(productAdapter);
+                recyclerView.setLayoutManager(new LinearLayoutManager(DashboardActivity.this, LinearLayoutManager.HORIZONTAL, false));
+
+
+            }
+
+            @Override
+            public void onFailure(Call<List<Products>> call, Throwable t) {
+
+                Log.d("Msg", "onFailure" + t.getLocalizedMessage());
+                Toast.makeText(DashboardActivity.this, "Error" + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
     private void loadCurrentUser() {
         UsersAPI usersAPI = Url.getInstance().create(UsersAPI.class);
