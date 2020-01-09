@@ -286,12 +286,37 @@ public class RegisterActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Leave New Registration");
+        builder.setMessage("Do You Want to Leave New Account Registration. Any changes will not be Save." + "\n"
+                + "\n" + "Are you Sure?");
+
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+                openDialog();
+
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+            }
+        });
+        builder.show();
+    }
 
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
     }
 
-
+    private void openDialog() {
+        LoginActivity loginDialog = new LoginActivity();
+        loginDialog.show(getSupportFragmentManager(), "login dialog");
+    }
 
 
 }
