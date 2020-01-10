@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgProfile"
             android:layout_width="150dp"
@@ -23,59 +22,51 @@
             android:layout_marginBottom="20dp"
             android:src="@drawable/uploadlogo" />
 
-
-
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email Address:"
+            android:text="Email address:"
             android:inputType="textEmailAddress"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
-        <androidx.appcompat.widget.AppCompatEditText
+        <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp" />
 
-
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Full name:"
             android:textStyle="bold" />
 
-
-        <androidx.appcompat.widget.AppCompatEditText
+        <EditText
             android:id="@+id/etFname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp" />
 
-
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Password (between 6 and 20 chars):"
             android:textStyle="bold" />
 
-
-        <androidx.appcompat.widget.AppCompatEditText
+        <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword" />
 
-
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Confirm password:"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
-
-        <androidx.appcompat.widget.AppCompatEditText
+        <EditText
             android:id="@+id/etCPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -83,76 +74,67 @@
             android:inputType="textPassword" />
 
 
-
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Phone:"
             android:textStyle="bold" />
 
-        <androidx.appcompat.widget.AppCompatEditText
+        <EditText
             android:id="@+id/etPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:inputType="number" />
 
-
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Mobile Phone:"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
-
-        <androidx.appcompat.widget.AppCompatEditText
+        <EditText
             android:id="@+id/etMphone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"/>
+            android:inputType="number" />
 
-
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="-3dp"
             android:layout_marginBottom="20dp"
-            android:text="Enter 10 digit Mobile No. starting with 9*********"/>
+            android:text="Enter 10 digit Mobile No. starting with 9*********" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Address 1 (Street Name):"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
-
-        <androidx.appcompat.widget.AppCompatEditText
+        <EditText
             android:id="@+id/etAddress1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp" />
 
-
-
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Address 2 (Area Location):"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
-
-        <androidx.appcompat.widget.AppCompatEditText
+        <EditText
             android:id="@+id/etAddress2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
-
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="-3dp"
             android:layout_marginBottom="20dp"
-            android:text="E.g Kupondole, New Baneshwor, etc"/>
+            android:text="E.g Kupondole, New Baneshwor, etc" />
 
 
         <Spinner
@@ -160,10 +142,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
-            android:spinnerMode="dropdown"/>
+            android:spinnerMode="dropdown" />
 
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Subscribe / Hide Phone:"
@@ -175,7 +157,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:buttonTint="@color/colorskyblue"
-            android:text="I do not want to subscribe to site newsletter."/>
+            android:text="I do not want to subscribe to site newsletter." />
 
         <CheckBox
             android:id="@+id/chPhone"
@@ -183,7 +165,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
             android:buttonTint="@color/colorskyblue"
-            android:text="Hide my phone number (only contact me through email)"/>
+            android:text="Hide my phone number (only contact me through email)" />
 
         <CheckBox
             android:id="@+id/chAgree"
@@ -193,7 +175,6 @@
             android:buttonTint="@color/colorskyblue"
             android:text="I have read and agree to terms of use."
             android:textStyle="bold" />
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -206,14 +187,8 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorskyblue"
                 android:text="Register"
-                android:textColor="@color/coloWhite"/>
-
-
+                android:textColor="#fff" />
         </LinearLayout>
-
-
-
-
 
     </LinearLayout>
 

@@ -15,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RegisterActivity"
+            android:theme="@style/AppThemeAction">
+        </activity>
         <activity android:name=".LoginActivity" />
         <activity
             android:name=".Condtions.AdActivity"
@@ -39,7 +41,7 @@
         <activity android:name=".DashboardActivity" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

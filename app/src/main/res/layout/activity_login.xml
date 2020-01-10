@@ -17,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/etEmail"
-            android:hint="Email Address"/>
+            android:hint="Email Address"
+            android:padding="5dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout

@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#E0DDDD"
+    android:background="@color/colordeam"
     tools:context=".DashboardActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
-        android:background="#F0F0F0"
+        android:background="@color/coloWhite"
         android:padding="5dp">
 
         <ImageView
@@ -52,7 +52,8 @@
 
 
 
-    <ImageView
+    <ViewFlipper
+        android:id="@+id/vFlipper"
         android:layout_width="match_parent"
         android:layout_height="250dp"/>
 

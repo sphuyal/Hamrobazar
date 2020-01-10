@@ -9,7 +9,9 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.sandesh.hamrobazar.Adapter.ProductAdapter;
 import com.sandesh.hamrobazar.Api.UsersAPI;
@@ -31,6 +33,7 @@ public class DashboardActivity extends AppCompatActivity {
     private CircleImageView imageProfile;
     private RecyclerView recyclerView;
     SwipeRefreshLayout refreshLayout;
+    ViewFlipper vFlipper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +43,16 @@ public class DashboardActivity extends AppCompatActivity {
         imageProfile = findViewById(R.id.imgProfile);
         recyclerView = findViewById(R.id.recyclerView);
         refreshLayout = findViewById(R.id.refreshLayout);
+
+        int images[]={R.drawable.sliderone,R.drawable.slidertwo,R.drawable.sliderthree};
+
+
+        vFlipper=findViewById(R.id.vFlipper);
+
+        for (int image:images){
+            flipperImage(image);}
         showProducts();
+
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -55,7 +67,19 @@ public class DashboardActivity extends AppCompatActivity {
     public void onBackPressed() {
         moveTaskToBack(true);
     }
+    public void flipperImage(int image){
+        ImageView imageView=new ImageView(this);
+        imageView.setBackgroundResource(image);
 
+        vFlipper.addView(imageView);
+        vFlipper.setFlipInterval(4000);
+        vFlipper.setAutoStart(true);
+
+        //animation
+
+        vFlipper.setInAnimation(this,android.R.anim.slide_in_left);
+
+    }
     private void showProducts() {
         refreshLayout.setRefreshing(false);
         Retrofit retrofit = new Retrofit.Builder().baseUrl(Url.base_url).addConverterFactory(GsonConverterFactory.create()).build();

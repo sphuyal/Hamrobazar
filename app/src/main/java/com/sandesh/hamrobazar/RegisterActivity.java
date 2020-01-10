@@ -72,11 +72,12 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister = findViewById(R.id.btnRegister);
         imgProfile = findViewById(R.id.imgProfile);
 
-        String address3[] = {"Select address", "Kathmandu", "Lalitpur", "Bhaktapur","Chitwan"};
+        String address3[] = {"Select address", "Kathmandu", "Lalitpur", "Bhaktapur"};
         ArrayAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, address3);
         spAddress3.setAdapter(adapter);
         //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         imgProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +101,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
+
 
     }
 
@@ -183,6 +185,7 @@ public class RegisterActivity extends AppCompatActivity {
         return status;
     }
 
+
     private void BrowseImage() {
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/*");
@@ -215,7 +218,6 @@ public class RegisterActivity extends AppCompatActivity {
         return result;
     }
 
-
     private void saveImageOnly() {
         File file = new File(imagePath);
         RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-data"), file);
@@ -235,6 +237,7 @@ public class RegisterActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 
     private void register() {
 
