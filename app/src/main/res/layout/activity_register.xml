@@ -29,7 +29,7 @@
             android:inputType="textEmailAddress"
             android:textStyle="bold" />
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
             android:text="Full name:"
             android:textStyle="bold" />
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etFname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,14 +51,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Password (between 6 and 20 chars):"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            app:passwordToggleEnabled="true"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -116,7 +117,7 @@
             android:id="@+id/etAddress1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp" />
+            android:layout_marginBottom="20dp"/>
 
         <TextView
             android:layout_width="match_parent"

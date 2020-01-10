@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatDialogFragment {
                     }
                 })
 
-                .setNeutralButton("Dont't have account? Register here", new DialogInterface.OnClickListener() {
+                .setNeutralButton("Register here", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent = new Intent(getContext(), RegisterActivity.class);
