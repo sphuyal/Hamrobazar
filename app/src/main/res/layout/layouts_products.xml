@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Product Price"
-        android:textColor="#2196F3"
+        android:textColor="@color/colorskyblue"
         android:textStyle="bold"
         android:textSize="15sp" />
 
